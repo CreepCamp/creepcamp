@@ -27,3 +27,11 @@ config :phoenix, :code_reloader, true
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
 
+# Configure your database
+config :creepcamp, Creepcamp.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  hostname: "creepcamp.fr",
+  port: 5432,
+  username: "postgres",
+  password: "password",
+  database: "creepcamp"
