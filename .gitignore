@@ -18,3 +18,4 @@ config/gitignored.exs
 erl_crash.dump
 *.ez
 *.swp
+*.sw*
