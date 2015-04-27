@@ -30,4 +30,3 @@ defmodule Tools.GenerateWeight do
   end
 
 end
-
