@@ -16,7 +16,7 @@ defmodule Creepcamp.Mixfile do
     [app: :creepcamp,
      version: "0.0.1",
      elixir: "~> 1.0",
-     elixirc_paths: ["lib", "web"],
+     elixirc_paths: ["lib", "web", "exemples"],  # On notera juste qu'exemples est rajouté a la compilation pour le rendre disponible dans IEX.
      compilers: [:phoenix] ++ Mix.compilers,
      deps: deps]
   end
@@ -26,9 +26,11 @@ defmodule Creepcamp.Mixfile do
   # Vous obtiendrez un tas d'informations complementaire sur cette fonction.
   # Mais afin de faire sa rapidement en francais voici ce qu'il y est dit en deux mots:
   # application retourne un Dictionnaire qui peux contenir ces informations:
-  # * mod: (obligatoire) c'est le point de depart du projet il dois contenir une fonction start() qui peux eventuellement demander des parametres (que vous pouvé entré ici entre [] ). mod: {Module, [Parametre]}
+  # * mod: (obligatoire) c'est le point de depart du projet il dois contenir une fonction start() 
+  #       qui peux eventuellement demander des parametres (que vous pouvé entré ici entre [] ). mod: {Module, [Parametre]}
   # * applications: indique les autres applications OTP que vous voullez demarré 
-  # * registered: ce champs indique le nom des processus unique, c'est important pour evité certains conflits entre application. Nous reviendrons la dessus quand nous aborderont le communication interprocess et OTP 
+  # * registered: ce champs indique le nom des processus unique, c'est important pour evité
+  #   certains conflits entre application. Nous reviendrons la dessus quand nous aborderont le communication interprocess et OTP 
   def application do
     [mod: {Creepcamp, []},
      applications: [:phoenix, :cowboy, :postgrex, :ecto, :logger]]
